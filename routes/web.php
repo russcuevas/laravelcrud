@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
@@ -79,8 +80,18 @@ use Illuminate\Http\Request;
 
 // Route::get('/admin', [AdminController::class, 'index']);
 // Route::get('/admin/{id}', [AdminController::class, 'show']);
+// Route::get('/students/{id}', [StudentController::class, 'show']);
 
 
+// Common routes naming
+//index - Show all data or students
+//show - Show a single data or students
+//create - Show a form that add a new user
+//store - Store a data
+//edit - Show form to edit a data
+//update - Update a data
+//destroy - Delete a data
 
 Route::get('/', [StudentController::class, 'index']);
-Route::get('/student/{id}', [StudentController::class, 'show']);
+Route::get('/login', [UserController::class, 'login']);
+Route::get('/register', [UserController::class, 'register']);
