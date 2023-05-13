@@ -1,26 +1,14 @@
+{{-- @dd(auth()->user()->email) --}}
 @include('partials.header')
-<nav class="bg-gray-800 text-white fixed w-full z-20 top-0 left-0 border-gray-200 px-2 sm:px-4 py-2.5">
-    <div class="container flex flex-wrap justify-between items-center mx-auto">
-        <a href="/">
-            <span class="self-center text-xl font-semibold whitespace-nowrap">
-                Student Management System
-            </span>
-        </a>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-main">
-            <ul class="flex flex-col md:flex-row px-4">
-                <li>
-                    <a href="#" class="block py-2 pr-4 pl-3">Logout</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 pr-4 pl-3">Sign In</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 pr-4 pl-3">Sign Up</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+@php
+    $array = array('title' => 'Student Management System')
+@endphp
+<x-nav :data="$array"/>
+
+
+
+
+
 <header class="max-w-lg mx-auto mt-20">
     <a href="#">
         <h1 class="text-4xl text-white font-bold text-center">Student List</h1>
@@ -67,15 +55,6 @@
         </table>
     </div>
 </section>
+
+
 @include('partials.footer')
-
-
-{{-- <ul>
-    @foreach ($students as $student )
-
-    <li>{{ $student->gender }}
-        {{ $student->gender_count }}
-    </li>
-        
-    @endforeach
-</ul> --}}

@@ -8,3 +8,4 @@
 @vite('resources/css/app.css')
 </head>
 <body class="bg-gray-900 min-h-screen pt-12 pb-6 px-2">
+    <x-messages/>
